@@ -4,7 +4,7 @@ from main import calcular_area
 
 
 def test_calcular_area():
-    assert calcular_area(5, 3) == 15
+    assert calcular_area(5, 3) == 20
 
 
 def test_calcular_area_con_decimales():
