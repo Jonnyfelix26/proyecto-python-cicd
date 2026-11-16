@@ -1,25 +1,14 @@
-def calcular_promedio(nota1, nota2, nota3):
-    notas = [nota1, nota2, nota3]
+def calcular_area(base, altura):
+    if base <= 0 or altura <= 0:
+        raise ValueError("La base y la altura deben ser valores positivos")
 
-    if not all(0 <= nota <= 20 for nota in notas):
-        raise ValueError("Las notas deben estar entre 0 y 20")
-
-    return sum(notas) / len(notas)
-
-
-def obtener_resultado(promedio):
-    if promedio >= 11:
-        return "APROBADO"
-    return "DESAPROBADO"
+    return base * altura
 
 
 if __name__ == "__main__":
-    nota1 = float(input("Ingrese nota 1: "))
-    nota2 = float(input("Ingrese nota 2: "))
-    nota3 = float(input("Ingrese nota 3: "))
+    base = float(input("Ingrese la base: "))
+    altura = float(input("Ingrese la altura: "))
 
-    promedio = calcular_promedio(nota1, nota2, nota3)
-    resultado = obtener_resultado(promedio)
+    area = calcular_area(base, altura)
 
-    print(f"Promedio: {promedio:.2f}")
-    print(f"Resultado: {resultado}")
+    print(f"Area del rectangulo: {area:.2f}")
